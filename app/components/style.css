@@ -223,42 +223,24 @@ li span {
 
 
 .actions {
-
- display:flex;
-
- gap:.8rem;
-
+  display: flex;
+  align-items: center;
 }
-
 
 
 .editBtn {
-
- background:#dbeafe;
-
- color:#2563eb;
-
+  background:#dbeafe;
+  color:#2563eb;
+  padding:.7rem 1rem;
+  margin-right: 20px;
 }
-
 
 
 .deleteBtn {
-
- background:#fee2e2;
-
- color:#dc2626;
-
+  background:#fee2e2;
+  color:#dc2626;
+  padding:.7rem 1rem;
 }
-
-
-
-.editBtn,
-.deleteBtn{
-
- padding:.7rem 1rem;
-
-}
-
 
 
 .editBtn:hover {
@@ -270,7 +252,6 @@ li span {
  transform:scale(1.05);
 
 }
-
 
 
 .deleteBtn:hover {
