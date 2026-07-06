@@ -2,18 +2,23 @@ type ButtonProps = {
   children: React.ReactNode;
   onClick: () => void;
   disabled?: boolean;
+  className?: string;
+  title?: string;
 };
 
 export default function Button({
   children,
   onClick,
   disabled,
+  className = "",
+  title,
 }: ButtonProps) {
   return (
     <button
       onClick={onClick}
       disabled={disabled}
-      className="rounded-xl bg-indigo-600 px-6 py-4 font-semibold text-white transition hover:bg-indigo-700 disabled:bg-gray-300"
+      title={title}
+      className={className}
     >
       {children}
     </button>

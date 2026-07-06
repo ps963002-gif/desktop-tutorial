@@ -29,11 +29,12 @@ export default function TodoInput({
       />
 
       <Button
-        onClick={addTask}
-        disabled={task.trim().length < 3}
-      >
-        {editIndex !== null ? "Update" : "Add"}
-      </Button>
+  onClick={addTask}
+  disabled={task.trim().length < 3}
+  className="rounded-xl bg-indigo-600 px-6 py-4 font-semibold text-white transition hover:bg-indigo-700 disabled:bg-gray-300"
+>
+  {editIndex !== null ? "Update" : "Add"}
+</Button>
     </div>
   );
 }

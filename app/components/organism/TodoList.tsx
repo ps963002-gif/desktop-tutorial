@@ -1,5 +1,4 @@
 "use client";
-
 import { useState, useEffect } from "react";
 import Header from "./Header";
 import TodoInput from "../molecules/TodoInput";
@@ -9,7 +8,6 @@ export default function TodoList() {
   const [tasks, setTasks] = useState<string[]>([]);
   const [editIndex, setEditIndex] = useState<number | null>(null);
   const [error, setError] = useState("");
-
   useEffect(() => {
     const savedTasks = localStorage.getItem("tasks");
     if (savedTasks) {
@@ -21,18 +19,15 @@ export default function TodoList() {
   }, [tasks]);
   function addTask() {
     const trimmedTask = task.trim();
-
     if (trimmedTask.length < 3) {
       setError("Task must contain at least 3 characters.");
       return;
     }
-
     const taskExists = tasks.some(
       (item, index) =>
         item.toLowerCase() === trimmedTask.toLowerCase() &&
         index !== editIndex
     );
-
     if (taskExists) {
       setError("This task already exists.");
       return;
