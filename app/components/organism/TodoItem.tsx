@@ -28,12 +28,12 @@ export default function TodoItem({
 
         <div className="flex-1 pr-24">
           <p className="text-lg font-medium text-slate-700 break-words">
-            {showFull || item.length <= 50
+            {showFull || item.length <= 40
               ? item
-              : `${item.slice(0, 50)}...`}
+              : `${item.slice(0, 40)}...`}
           </p>
 
-          {item.length > 50 && (
+          {item.length > 40 && (
             <button
               onClick={() => setShowFull(!showFull)}
               className="mt-2 text-sm font-medium text-indigo-600 hover:underline"
